@@ -1,11 +1,12 @@
-$primary-color: #405d27;
-$secondary-color: #3e4444;
+$primary-color: #ffa500;
+$secondary-color: #454545;
+$background-color: #efeeed;
 
 main.container {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0 0;
   padding: 20px;
-  background-color: lighten($primary-color, 20%);
+  background-color: $background-color;
 
   h1 {
     color: $primary-color;
