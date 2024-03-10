@@ -20,8 +20,11 @@ export const faqItems = [
     answer: `You can get in touch with us by sending an email to <a href="mailto:support@avocadoftw.com" class="text-light">support@avocadoftw.com</a>. We'd love to hear from you and answer any questions you have about Avocado FTW.`,
   },
   {
-    question: 'How can I get involved in the beta',
-    answer: `If you're interested in helping us test Avocado FTW and make it the best app it can be, you can sign up for our beta program by filling out the form above. We'd love to have you on board!`,
+    question: 'How can I contribute to the project?',
+    answer: `You can contribute to the Avocado FTW project by visiting our GitHub repository and opening an issue or pull request. We're always looking for feedback and contributions from the community.
+    <br />
+    <br />
+    You can also buy us a coffee to show your much appreciated support!`,
   },
   {
     question: 'What if I have other questions?',
