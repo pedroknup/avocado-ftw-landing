@@ -1,36 +1,111 @@
 .is-boxed {
-    background: color(bg, 1);
+  background: color(bg, 1);
 }
 
 .body-wrap {
-    background: color(bg, 1);
-    overflow: hidden;
-    /* Sticky footer */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  background: color(bg, 1);
+  overflow: hidden;
+  /* Sticky footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .boxed-container {
-    max-width: 1440px;
-    margin: 0 auto;
-    @include shadow;
+  max-width: 1440px;
+  margin: 0 auto;
+  @include shadow;
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .section-inner {
-    position: relative; /* To always display inner elements above pseudo decorative stuff */
-    padding-top: 48px;
-    padding-bottom: 48px;
+  position: relative; /* To always display inner elements above pseudo decorative stuff */
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
-@include media( '>medium' ) {
+@include media('>medium') {
+  .section-inner {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+}
 
-    .section-inner {
-        padding-top: 88px;
-        padding-bottom: 88px;
-    }
+section.beta-request {
+  background-color: color(primary, 1);
+  color: color(typography, 3) !important;
+  position: relative;
+  z-index: 1;
+
+  .section-inner {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  //   input {
+  //     margin-bottom: 24px;
+  //     border: 1px solid color(bg, 3);
+  //     padding: 8px;
+  //     width: 100%;
+
+  //   }
+}
+
+form.beta {
+  position: relative;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+
+  input,
+  select {
+    border: 1px solid color(bg, 3);
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  label {
+    // padding: 8px;
+    font-size: 16px;
+    color: color(typography, 3);
+    font-weight: bold;
+  }
+
+  input.button {
+    width: auto;
+  }
+}
+
+.disclaimer {
+  color: color(typography, 3);
+  font-size: 14px;
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+  margin-top: -24px;
+}
+.select {
+  position: relative;
+  &__input {
+    height: 48px;
+  }
+}
+
+@keyframes background-move {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 100vw 0, 0 0;
+    background-position: unquote('max(100vw, 40em)') 0, 0 0;
+  }
 }
