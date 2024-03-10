@@ -37,4 +37,10 @@
         line-height: 16px;
         padding: 8px 24px;
     }
+
+    .primary {
+        background-color: color(primary, 1);
+        color: color(typography, 1) !important;
+        padding: 8px 24px;
+    }
 }
