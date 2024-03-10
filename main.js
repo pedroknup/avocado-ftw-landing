@@ -1,5 +1,6 @@
 import './scss/style.scss'
 import './style.scss'
+import './fonts/bebasneue.css';
 (function () {
   const doc = document
   const rootEl = doc.documentElement
