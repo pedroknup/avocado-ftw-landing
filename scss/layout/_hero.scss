@@ -57,9 +57,11 @@
 }
 
 .hero-logo {
+  animation: heroFadeIn 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.5s;
   display: block;
   margin: auto;
-	height: 140px;
+  height: 140px;
+	opacity: 0;
 }
 
 .hero-title {
@@ -72,11 +74,11 @@
 }
 
 .hero-paragraph {
-	color: color(typography, 2);
+  color: color(typography, 2);
 }
 
 .hero-cta.video {
-	margin-top: 12px;
+  margin-top: 12px;
 }
 
 @include media('>medium') {
