@@ -183,18 +183,3 @@ import './fonts/bebasneue.css';
   })()
 }())
 
-const faqQuestions = document.querySelectorAll('.faq-question')
-faqQuestions.forEach(question => {
-  question.addEventListener('click', () => {
-    const itemIndex = question.getAttribute('data-faq-item-index')
-    toggleFaqAnswer(itemIndex)
-  })
-})
-
-function toggleFaqAnswer(faqItemIndex) {
-  console.log('index', faqItemIndex)
-  const faqItemId = `faq-item-${faqItemIndex}`
-  console.log('toggling', faqItemIndex)
-  const answer = document.getElementById(faqItemId);
-  answer.classList.toggle('collapsed')
-}
