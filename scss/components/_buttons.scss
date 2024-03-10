@@ -116,7 +116,10 @@
   background: transparent;
   border: 2px solid transparent;
   transition: border 0.3s ease;
-  color: color(typography, 1) !important;
+
+  &.white {
+    color: color(typography, 1) !important;
+  }
   &:hover {
     border: 2px solid color(primary, 1);
   }
