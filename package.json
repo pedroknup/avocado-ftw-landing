@@ -1,11 +1,12 @@
 {
-  "name": "vanilla-sass-boilerplate",
+  "name": "avocadoftw",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "npm run build && gcloud app deploy app.yaml --project ${npm_package_name} --promote --quiet",
     "preview": "vite preview"
   },
   "devDependencies": {

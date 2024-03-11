@@ -1,0 +1,39 @@
+runtime: python39 # or another supported version
+
+instance_class: F2
+
+handlers:
+  # Static assets (anything with a file extension)
+  - url: /(.*\..*)
+    static_files: dist/\1
+    upload: dist/(.*)
+    secure: always
+    http_headers:
+      X-Frame-Options: 'DENY'
+      Strict-Transport-Security: 'max-age=2592000; includeSubdomains'
+      X-Content-Type-Options: 'nosniff'
+      X-XSS-Protection: '1; mode=block'
+      Content-Security-Policy: base-uri 'none';
+
+  # Handle all other paths by frontend
+  - url: .*
+    static_files: dist/index.html
+    upload: dist/index.html
+    secure: always
+    expiration: '0s'
+    http_headers:
+      X-Frame-Options: 'DENY'
+      Strict-Transport-Security: 'max-age=2592000; includeSubdomains'
+      X-Content-Type-Options: 'nosniff'
+      X-XSS-Protection: '1; mode=block'
+      Content-Security-Policy: "
+        default-src 'none';
+        media-src 'self';
+        img-src 'self' https: data:;
+        # connect-src 'self' https://avocado-ftw-app.herokuapp.com/ https://*.appspot.com https://www.google-analytics.com https://www.gstatic.com/ https://*.googleapis.com http://35.222.25.17:8080 https://cdn.jsdelivr.net/npm/@undecaf/zbar-wasm@0.9.11/dist/index.js https://cdn.jsdelivr.net/npm/@undecaf/barcode-detector-polyfill@0.9.12/dist/index.js https://nl.openfoodfacts.org;
+        script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cloud.google.com https://www.googletagmanager.com https://www.google-analytics.com https://apis.google.com https://www.gstatic.com https://accounts.google.com https://cdn.jsdelivr.net/npm/@undecaf/zbar-wasm@0.9.11/dist/index.js https://cdn.jsdelivr.net/npm/@undecaf/barcode-detector-polyfill@0.9.12/dist/index.js https://nl.openfoodfacts.org;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        manifest-src 'self';
+        frame-src 'self' https://accounts.google.com https://apis.google.com https://www.youtube.com https://www.youtube-nocookie.com;"
+        
