@@ -20,6 +20,10 @@ export const faqItems = [
     answer: `You can get in touch with us by sending an email to <a href="mailto:support@avocadoftw.com" class="text-light">support@avocadoftw.com</a>. We'd love to hear from you and answer any questions you have about Avocado FTW.`,
   },
   {
+    question: `I don't see my the meals that I have eaten in the other devices, what's wrong?`,
+    answer: `Nothing is wrong. For the sake of practicality, the meals are stored locally in the device, so you won't see the meals that you have eaten in other devices. There is no back tracking of the meals that you have had. If you edit your week plan anywhere, that will be considered a new plan and the previous one will be lost.`,
+  },
+  {
     question: 'How can I contribute to the project?',
     answer: `You can contribute to the Avocado FTW project by visiting our GitHub repository and opening an issue or pull request. We're always looking for feedback and contributions from the community.
     <br />

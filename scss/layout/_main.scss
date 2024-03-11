@@ -110,6 +110,7 @@ form.beta {
 
   input.button {
     width: auto;
+    margin: auto;
   }
 
   @include media('>medium') {
