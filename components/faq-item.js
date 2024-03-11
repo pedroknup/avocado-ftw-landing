@@ -20,6 +20,10 @@ class FaqItem extends HTMLElement {
 
   render() {
     const { question, answer, id } = this.attributes;
+
+    if (!question || !answer || !id) {
+      return;
+    }
     this.innerHTML = `
       <div class="faq-item collapsed" id="faq-item-${id.value}">
         <div class="faq-question" data-faq-item-index="${id.value}" onclick="this.parentElement.parentElement.toggleCollapse()">
