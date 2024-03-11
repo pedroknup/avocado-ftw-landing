@@ -1,4 +1,6 @@
 import './style.scss';
+import successImage from '../../images/success.png';
+import betaUserImage from '../../images/beta-user.png';
 
 class BetaRequestForm extends HTMLElement {
   connectedCallback() {
@@ -95,12 +97,12 @@ class BetaRequestForm extends HTMLElement {
         you for signing up for our beta program. We've received your request and will send you a login code when
         we're ready to launch.</p>
       <p class="m-0">We've sent a confirmation email to <strong>${this.emailAddressSent}</strong>.</p>
-      <img src="/images/success.png" alt="iPhone Beta Request illustration">
+      <img src="${successImage}" alt="iPhone Beta Request illustration">
     </div>
 
   `
   }
-    <img class="beta-request-bg" src="/images/beta-user.png" alt="iPhone Beta Request illustration" style="margin-top: ${this.isSuccessfullySent ? '0' : '-120px'}">
+    <img class="beta-request-bg" src="${betaUserImage}" alt="iPhone Beta Request illustration" style="margin-top: ${this.isSuccessfullySent ? '0' : '-120px'}">
 
   </div>
 </div>`;
