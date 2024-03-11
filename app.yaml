@@ -30,10 +30,8 @@ handlers:
         default-src 'none';
         media-src 'self';
         img-src 'self' https: data:;
-        # connect-src 'self' https://avocado-ftw-app.herokuapp.com/ https://*.appspot.com https://www.google-analytics.com https://www.gstatic.com/ https://*.googleapis.com http://35.222.25.17:8080 https://cdn.jsdelivr.net/npm/@undecaf/zbar-wasm@0.9.11/dist/index.js https://cdn.jsdelivr.net/npm/@undecaf/barcode-detector-polyfill@0.9.12/dist/index.js https://nl.openfoodfacts.org;
-        script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cloud.google.com https://www.googletagmanager.com https://www.google-analytics.com https://apis.google.com https://www.gstatic.com https://accounts.google.com https://cdn.jsdelivr.net/npm/@undecaf/zbar-wasm@0.9.11/dist/index.js https://cdn.jsdelivr.net/npm/@undecaf/barcode-detector-polyfill@0.9.12/dist/index.js https://nl.openfoodfacts.org;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cloud.google.com https://www.googletagmanager.com https://www.google-analytics.com https://apis.google.com https://www.gstatic.com https://accounts.google.com https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js;
+        style-src 'self' 'unsafe-inline' sha256-qZ/jzrikSEKLjBxUC2I5A/BOJVAFZ6aieM34snRNEuE= sha256-jsjjJEge5aFRz6KFS8707+pyQMoi7sdYjMDtSlllUig=;
         font-src 'self' https://fonts.gstatic.com;
         manifest-src 'self';
         frame-src 'self' https://accounts.google.com https://apis.google.com https://www.youtube.com https://www.youtube-nocookie.com;"
-        
