@@ -1,0 +1,22 @@
+.about-us {
+
+  h2 {
+    color: color(typography, 1);
+  }
+  
+  &-image {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 24px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+}
