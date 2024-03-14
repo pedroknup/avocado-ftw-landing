@@ -28,6 +28,7 @@
   &.dynamic {
     background-color: color(bg, 1);
     box-shadow: 0 8px 16px rgba(color(typography, 1), 0.12);
+    color: color(typography, 1);
     opacity: 1;
     transform: translateY(-100%);
     position: fixed;
@@ -40,6 +41,17 @@
   &.scrolling {
     transform: translateY(0);
     opacity: 1 !important;
+
+    .container {
+      width: auto;
+      margin: 0;
+    }
+
+    @include media('<medium') {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
   }
 
   &.collapsed {
@@ -74,6 +86,9 @@
     }
     @include font-weight(semibold);
     @include anchor-aspect(header);
+
+    color: color(typography, 3);
+
     line-height: 16px;
     padding: 8px 24px;
   }
@@ -82,5 +97,16 @@
     background-color: color(primary, 1);
     color: color(typography, 1) !important;
     padding: 8px 24px;
+  }
+
+  // hide on mobile
+  @include media('<=medium') {
+    display: none;
+  }
+}
+
+.scrolling.dynamic {
+  a:not(.button) {
+    color: color(typography, 1);
   }
 }
