@@ -208,7 +208,7 @@ window.addEventListener('scroll', function () {
   const mainHeader = document.querySelector('.site-header.main');
   const isScrollingUp = window.scrollY < lastScroll;
 
-  if (window.scrollY > 0) {
+  if (window.scrollY > 5) {
     mainHeader.classList.add('collapsed');
 
     if (isScrollingUp) {
@@ -224,6 +224,7 @@ window.addEventListener('scroll', function () {
   } else {
     mainHeader.classList.remove('collapsed');
     mainHeader.classList.remove('dynamic');
+    mainHeader.classList.remove('scrolling');
     // mainHeader.classList.add('collapsed');
     // dynamicHeader.classList.remove('scrolling');
   }
