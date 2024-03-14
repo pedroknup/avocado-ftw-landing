@@ -13,7 +13,7 @@ export const faqItems = [
   },
   {
     question: 'What platforms is Avocado FTW available on?',
-    answer: `Avocado FTW will be available on iOS, Android, and the web. You can use it on your phone, tablet, or computer, so you can track your meals and macros wherever you are.`,
+    answer: `Avocado FTW will be available on iOS, Android, and the web. You can use it on your phone, tablet, or computer.`,
   },
   {
     question: 'How can I get in touch with you?',
@@ -32,6 +32,6 @@ export const faqItems = [
   },
   {
     question: 'What if I have other questions?',
-    answer: `If you have other questions that aren't answered here, feel free to get in touch with us. We're here to help and we want to make sure you have all the information you need about Avocado FTW.`,
+    answer: `If you have other questions that aren't answered here, feel free to <a href="mailto:support@avocadoftw.com" class="text-light">get in touch with us</a>. We're here to help and we want to make sure you have all the information you need about Avocado FTW.`,
   },
 ];
