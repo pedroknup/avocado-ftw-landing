@@ -31,19 +31,19 @@
     background-repeat: no-repeat;
   }
 
-  &::before {
-    top: 0;
-    height: 159px;
-    background-image: url('../images/hero-bg-top.png');
-    background-size: 720px 159px;
-  }
+  // &::before {
+  //   top: 0;
+  //   height: 159px;
+  //   background-image: url('../images/hero-bg-top.png');
+  //   background-size: 720px 159px;
+  // }
 
-  &::after {
-    bottom: 42%;
-    height: 173px;
-    background-image: url('../images/hero-bg-bottom.png');
-    background-size: 720px 173px;
-  }
+  // &::after {
+  //   bottom: 42%;
+  //   height: 173px;
+  //   background-image: url('../images/hero-bg-bottom.png');
+  //   background-size: 720px 173px;
+  // }
 }
 
 .hero-inner {
@@ -74,7 +74,7 @@
 }
 
 .hero-paragraph {
-  color: color(typography, 2);
+  color: color(typography, 3);
 }
 
 .hero-cta.video {

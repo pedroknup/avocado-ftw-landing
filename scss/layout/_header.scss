@@ -26,9 +26,9 @@
   }
 
   &.dynamic {
-    background-color: color(bg, 1);
+    background-color: color(bg, 1i);
     box-shadow: 0 8px 16px rgba(color(typography, 1), 0.12);
-    color: color(typography, 1);
+    color: color(typography, 3);
     opacity: 1;
     transform: translateY(-100%);
     position: fixed;
@@ -44,7 +44,6 @@
 
     .container {
       width: auto;
-      margin: 0;
     }
 
     @include media('<medium') {
@@ -173,9 +172,9 @@ body.nav-open {
 
 .scrolling.dynamic {
   .nav-icon span {
-    background: color(typography, 1);
+    background: color(typography, 3);
   }
   a:not(.button) {
-    color: color(typography, 1);
+    color: color(typography, 3);
   }
 }
