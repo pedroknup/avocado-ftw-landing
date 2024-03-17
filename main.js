@@ -225,8 +225,6 @@ window.addEventListener('scroll', function () {
     mainHeader.classList.remove('collapsed');
     mainHeader.classList.remove('dynamic');
     mainHeader.classList.remove('scrolling');
-    // mainHeader.classList.add('collapsed');
-    // dynamicHeader.classList.remove('scrolling');
   }
 
   lastScroll = window.scrollY;
